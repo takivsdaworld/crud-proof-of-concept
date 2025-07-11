@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <a href="index.html">Back to Shop</a>
+    </header>
+    <main>
+        <section id="admin-section">
+            <h2>Add / Edit Product</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <label>
+                    Name:<br>
+                    <input type="text" id="product-name" required>
+                </label><br>
+                <label>
+                    Price:<br>
+                    <input type="number" id="product-price" min="0" step="0.01" required>
+                </label><br>
+                <label>
+                    Image URL:<br>
+                    <input type="url" id="product-image" required>
+                </label><br>
+                <label>
+                    Description:<br>
+                    <textarea id="product-description" required></textarea>
+                </label><br>
+                <button type="submit" id="save-btn">Save Product</button>
+                <button type="button" id="cancel-btn" style="display:none;">Cancel</button>
+            </form>
+            <h2>All Products</h2>
+            <table id="products-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Product rows will be dynamically inserted here by script.js -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
